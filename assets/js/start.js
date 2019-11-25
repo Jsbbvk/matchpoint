@@ -364,7 +364,10 @@ function backToWaitingRoom(cb) {
     document.getElementById('toggleMenuButton').innerHTML = '<i class="fas fa-caret-down"></i>';
     $('#toggleMenuButton').css('top', '100%');
 
-    $('#playing').fadeOut(1000, function() {
+    $('#playing').fadeOut(800, function() {
+        $('#create-answer, #waiting-answers, #voting, #result-section').css('display','none');
+        $('#voting-section').css('display','block');
+
         $("#menu").removeClass('mSlideUp');
         cb&&cb();
     });

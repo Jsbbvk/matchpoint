@@ -110,9 +110,6 @@ socket.on('player leave', function(gamestart, id) {
             }).fadeOut(400, function() {
                 resetting = false;
                 displayPrevScore=true;
-
-                $('#create-answer, #waiting-answers, #voting, #result-section').css('display','none');
-                $('#voting-section').css('display','block');
                 displayWaitingRoom();
             });
         });
