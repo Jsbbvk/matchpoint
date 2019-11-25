@@ -1,0 +1,90 @@
+
+
+
+#menu {
+    position: fixed;
+    width: 80%;
+    height: 60vh;
+    border: 1px solid black;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index:1;
+    display:block;
+    background-color:white;
+}
+#menuDisplay {
+    display:none;
+    height:90%;
+}
+
+#menu.mSlideDown {
+    animation: mslideDown 500ms forwards linear;
+}
+
+#menu.mSlideDown > #menuDisplay {
+    display:block;
+}
+#menu.mSlideUp > #menuDisplay {
+    display:none;
+}
+
+#menu.mSlideUp {
+    animation: mslideUp 500ms forwards linear;
+}
+
+@keyframes mslideUp {
+    0% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        top: 0%;
+        transform: translate(-50%, -100%);
+    }
+}
+@keyframes mslideDown {
+    0% {
+        top: 0%;
+        transform: translate(-50%, -100%);
+    }
+    100% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+#scoreboard {
+    height: 70%;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+#toggleMenuButton {
+    position: absolute;
+    font-size: 3rem;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0%);
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+
+}
+#toggleMenuButton:hover {
+    cursor: pointer;
+}
+
+#menuDisplay .button-1 {
+    border-radius: 0px;
+}
+
+@media only screen and (min-width: 600px) {
+    #toggleMenuButton {
+        font-size: 4rem;
+    }
+
+    #menu {
+        max-width: 500px;
+        height: 80vh;
+    }
+
+}

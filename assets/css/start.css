@@ -1,0 +1,292 @@
+
+
+#rules, #waiting-rules {
+    font-size: 25px;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+}
+#rules:hover, #waiting-rules:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+#rule-display, #waiting-rule-display {
+    position:absolute;
+    z-index: 1;
+    width: 80%;
+    height: 85%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #e5cbb7;
+    border-radius: 5px;
+    display:none;
+}
+
+#close-rule-display, #waiting-close-rule-display {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+}
+
+#close-rule-display:hover, #waiting-close-rule-display:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+#rule-traditional, #waiting-rule-traditional {
+    width: 100%;
+    overflow-y:auto;
+    font-size:1rem;
+    height:80%;
+}
+
+#rule-leader {
+    width: 100%;
+    display:none;
+}
+
+#rule-leader-R{
+    height: 250px;
+    overflow:auto;
+}
+
+#disclaimer {
+    font-size: 10px;
+    width:100%;
+    padding: 5px;
+    text-align: center;
+}
+
+#prevScoreDisplay {
+  position: absolute;
+  width: 80%;
+  height: 80vh;
+  border: 1px solid black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:1;
+  display:none;
+  background-color:white;
+}
+
+#prevScoreB {
+  position: absolute;
+  display:none;
+  top: 2%;
+  right: 5%;
+   user-select: none;
+}
+
+#prevScoreB:hover {
+  cursor: pointer;
+}
+
+#close-prevScore-display {
+  position : absolute;
+  top: 1%;
+  right: 5%;
+}
+
+#close-prevScore-display:hover {
+  cursor: pointer;
+}
+
+#link-to-repo {
+    text-align:center;
+    margin-top: 4vh;
+}
+
+#start-create-error, #start-join-error {
+    text-align: center;
+    color: red;
+}
+
+#start-title {
+    position: static;
+    font-size: 35px;
+    text-align: center;
+    z-index: 2;
+
+    line-height: 30px;
+}
+
+#start-join-display, #start-create-display {
+    position: static;
+    margin: 0 auto;
+
+    width: 75vw;
+    display:none;
+}
+
+.form-control {
+    border: 1px solid #e5cbb7;
+}
+
+#start-join-game-button, .start-back-button, #start-create-game-button {
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+#start-join-button, #start-create-button {
+    position: relative;
+    margin: 0;
+    width: 100% !important;
+}
+
+
+
+#start-buttons {
+    width: 100vw;
+    margin: 6rem 0 0;
+}
+#start-buttons > div {
+    height: 120px;
+}
+
+.start-button {
+    background-color: white;
+    border: 2px solid #e5cbb7;
+    padding: 20px 35px;
+    margin: 0 auto;
+    font-size: 20px;
+    display: block;
+    width: 200px;
+
+}
+.start-button:hover {
+    border: 2px solid gray;
+    cursor: pointer;
+}
+.start-button:focus{outline:none;}
+
+
+.checkboxContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 5rem;
+  margin-left:50px;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #c3c2c2;
+}
+
+.checkboxContainer:hover input ~ .checkmark {
+  background-color: #999999;
+}
+
+.checkboxContainer input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkboxContainer .checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 7px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 600px) {
+
+    #link-to-repo {
+      margin-top: 20vh;
+    }
+
+    #menu, #prevScoreDisplay {
+      max-width: 500px;
+    }
+
+    #start-join-display, #start-create-display {
+        width: 300px;
+
+    }
+
+    .start-button {
+        padding: 20px 35px;
+        border: 3px solid #e5cbb7;
+        font-size: 20px;
+        margin: 0 auto;
+        width: 200px;
+    }
+    .start-button:hover {
+        border: 3px solid gray;
+    }
+
+    #start-buttons {
+        width: 70vw;
+        max-width: 700px;
+        margin: 9rem auto 0 auto !important;
+    }
+
+    #disclaimer {
+        font-size: 12px;
+    }
+
+    #rule-display, #waiting-rule-display {
+        padding: 20px 50px;
+        width:500px;
+    }
+
+    #rule-leader-R, #waiting-rule-leader-R {
+        height: 45vh;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+}
