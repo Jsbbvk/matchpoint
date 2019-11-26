@@ -1,15 +1,20 @@
 
 
-
+const NOT_PLAYING = -1;
 const CREATING = 0;
 const WAITING = 1;
 const VOTING = 2;
 const RESULTS = 3;
 
-var gamestate = -1;
+var gamestate = NOT_PLAYING;
 
 var isLeaving = false;
 
+
+window.onbeforeunload = function() {
+  if (gamestate != NOT_PLAYING)
+    return "Confirm?";
+}
 
 window.onpagehide = function() {
     if (!isLeaving) socket.emit('delete player', roomID, nameID);
@@ -130,4 +135,3 @@ socket.on('player leave', function(gamestart, id) {
         }
     }
 });
-
